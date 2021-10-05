@@ -6,6 +6,7 @@
 package com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb;
 import java.util.*;
 import org.springframework.beans.factory.annotation.*;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.http.*; 
 import org.springframework.web.bind.annotation.*;
  
@@ -14,19 +15,28 @@ import org.springframework.web.bind.annotation.*;
  *
  * @author s541906
  */
+@CrossOrigin
 @RestController
 public class DevelopersController {
    @Autowired
     private DevelopersService service;
-   //to get all the list of developers
-   @CrossOrigin
-   @GetMapping("/developers")
-    public List<Developers> list() {
-   return service.listAll();
+   //To get one Developer Randomly
+
+   @GetMapping("/developers/random")
+    public Developers random() {
+   return service.findRandom();
 }
+ 
+ // To get list of all of developers
+ @GetMapping("/developers/getall")
+ public List<Developers> getall(){
+	 return service.listAll();
+ }
+ 
     //To get list of developers by Id
-   @GetMapping("/developers/{developerid}")
-public ResponseEntity<Developers> get(@PathVariable String developerid) {
+
+   @GetMapping("/developers/getbyId/{developerid}")
+public ResponseEntity<Developers> getbyId(@PathVariable String developerid) {
     try {   
         Developers developers = service.get(developerid);
         return new ResponseEntity<Developers>(developers, HttpStatus.OK);
@@ -35,13 +45,14 @@ public ResponseEntity<Developers> get(@PathVariable String developerid) {
     }      
 } 
 // Create developers
-  @CrossOrigin
-@PostMapping("/developers")
-public void add(@RequestBody Developers developer) {
+
+@PostMapping("/developers/create")
+public void create(@RequestBody Developers developer) {
     service.save(developer);
 }
 // Update developers
-@PutMapping("/developers/{developerid}")
+
+@PutMapping("/developers/update/{developerid}")
 public ResponseEntity<?> update(@RequestBody Developers developers, @PathVariable String developerid) {
     try {
         Developers existDevelopers = service.get(developerid);
@@ -52,7 +63,8 @@ public ResponseEntity<?> update(@RequestBody Developers developers, @PathVariabl
     }         
 }
 // Delete Developers
-@DeleteMapping("/products/{developerid}")
+
+@DeleteMapping("/developers/delete/{developerid}")
 public void delete(@PathVariable String developerid) {
     service.delete(developerid);
 }

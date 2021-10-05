@@ -5,10 +5,11 @@
  */
 package com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb;
 
-import java.util.List; 
-import javax.transaction.Transactional; 
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
+
 /**
  *
  * @author s541906
@@ -18,22 +19,26 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class DevelopersService {
 
-   @Autowired
-    private DevelopersRepository devlopersRepository;
-     
-    public List<Developers> listAll() {
-        return devlopersRepository.findAll();
-    }
-     
-    public void save(Developers developer) {
-        devlopersRepository.save(developer);
-    }
-     
-    public Developers get(String DeveloperId) {
-        return devlopersRepository.findById(DeveloperId).get();
-    }
-     
-    public void delete(String DeveloperId) {
-        devlopersRepository.deleteById(DeveloperId);
-    }
+	@Autowired
+	private DevelopersRepository devlopersRepository;
+	
+	public Developers findRandom() {
+		return devlopersRepository.random();
+	}
+	
+	public List<Developers>listAll(){
+		return devlopersRepository.findAll();
+	}
+
+	public void save(Developers developer) {
+		devlopersRepository.save(developer);
+	}
+
+	public Developers get(String DeveloperId) {
+		return devlopersRepository.findById(DeveloperId).get();
+	}
+
+	public void delete(String DeveloperId) {
+		devlopersRepository.deleteById(DeveloperId);
+	}
 }
