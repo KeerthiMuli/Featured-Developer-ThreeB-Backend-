@@ -37,7 +37,7 @@ public class Developers {
     
    
     public String getDeveloperId() {
-        return DeveloperId;
+        return developerId;
     }
 
     public void setDeveloperId(String developerId) {
@@ -48,7 +48,7 @@ public class Developers {
         return fullName;
     }
 
-    public void setFullName(String FullName) {
+    public void setFullName(String fullName) {
         this.fullName = fullName;
     }
 
