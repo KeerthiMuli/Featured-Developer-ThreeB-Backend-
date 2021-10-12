@@ -34,11 +34,11 @@ public class DevelopersService {
 		devlopersRepository.save(developer);
 	}
 
-	public Developers get(String DeveloperId) {
-		return devlopersRepository.findById(DeveloperId).get();
+	public Developers get(String developerId) {
+		return devlopersRepository.findById(developerId).get();
 	}
 
-	public void delete(String DeveloperId) {
-		devlopersRepository.deleteById(DeveloperId);
+	public void delete(String developerId) {
+		devlopersRepository.deleteById(developerId);
 	}
 }
