@@ -6,6 +6,8 @@
 package com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+
 import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
@@ -18,14 +20,16 @@ import org.springframework.stereotype.Service;
 @Service
 @Transactional
 public class DevelopersService {
-
 	@Autowired
 	private DevelopersRepository devlopersRepository;
 	
 	public Developers findRandom() {
 		return devlopersRepository.random();
 	}
-	
+//	public Developers findRandom2() {
+	//	return devlopersRepository.random2();
+	//}
+
 	public List<Developers>listAll(){
 		return devlopersRepository.findAll();
 	}
@@ -34,11 +38,11 @@ public class DevelopersService {
 		devlopersRepository.save(developer);
 	}
 
-	public Developers get(String DeveloperId) {
-		return devlopersRepository.findById(DeveloperId).get();
+	public Developers get(String developerId) {
+		return devlopersRepository.findById(developerId).get();
 	}
 
-	public void delete(String DeveloperId) {
-		devlopersRepository.deleteById(DeveloperId);
+	public void delete(String developerId) {
+		devlopersRepository.deleteById(developerId);
 	}
 }
