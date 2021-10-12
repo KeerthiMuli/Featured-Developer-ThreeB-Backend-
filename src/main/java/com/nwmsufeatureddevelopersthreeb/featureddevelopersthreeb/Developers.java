@@ -19,9 +19,9 @@ import javax.persistence.Table;
 public class Developers {
     @Id
     @Column(name="developerid")
-    private String DeveloperId;
+    private String developerId;
     @Column(name="fullname")
-    private String FullName;
+    private String fullName;
     @Column(name="emailaddress")
     private String Emailaddress;
     @Column(name="goals")
@@ -40,16 +40,16 @@ public class Developers {
         return DeveloperId;
     }
 
-    public void setDeveloperId(String DeveloperId) {
-        this.DeveloperId = DeveloperId;
+    public void setDeveloperId(String developerId) {
+        this.developerId = developerId;
     }
 
     public String getFullName() {
-        return FullName;
+        return fullName;
     }
 
     public void setFullName(String FullName) {
-        this.FullName = FullName;
+        this.fullName = fullName;
     }
 
     public String getEmailaddress() {
@@ -102,8 +102,8 @@ public class Developers {
     
         @Override
     public String toString() {
-        return "Developers{" + "DeveloperId=" + DeveloperId + ", FullName=" + 
-                FullName + ", Emailaddress=" + Emailaddress + ", Goals=" + 
+        return "Developers{" + "DeveloperId=" + developerId + ", FullName=" + 
+                fullName + ", Emailaddress=" + Emailaddress + ", Goals=" + 
                 Goals + ", Skills=" + Skills + ", Linkedinurl=" + Linkedinurl + ", "
                 + "Githuburl=" + Githuburl + ", Image=" + Image + '}';
     }
