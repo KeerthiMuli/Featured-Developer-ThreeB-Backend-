@@ -42,7 +42,7 @@ public class DevelopersController {
  
     //To get list of developers by Id
 
-   @GetMapping("/developers/getbyId/{developerid}")
+   @GetMapping("/developers/getbyId/{developerId}")
 public ResponseEntity<Developers> getbyId(@PathVariable String developerId) {
     try {   
         Developers developers = service.get(developerId);
