@@ -51,30 +51,5 @@ public ResponseEntity<Developers> getbyId(@PathVariable String developerId) {
         return new ResponseEntity<Developers>(HttpStatus.NOT_FOUND);
     }      
 } 
-// Create developers
-
-@PostMapping("/developers/create")
-
-public void create(@RequestBody Developers developer) {
-    service.save(developer);
-}
-// Update developers
-
-@PutMapping("/developers/update/{developerid}")
-public ResponseEntity<?> update(@RequestBody Developers developers, @PathVariable String developerId) {
-    try {
-        Developers existDevelopers = service.get(developerId);
-        service.save(developers);
-        return new ResponseEntity<>(HttpStatus.OK);
-    } catch (NoSuchElementException e) {
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    }         
-}
-// Delete Developers
-
-@DeleteMapping("/developers/delete/{developerId}")
-public void delete(@PathVariable String developerId) {
-    service.delete(developerId);
-}
 
 }
