@@ -26,10 +26,6 @@ public class DevelopersService {
 	public Developers findRandom() {
 		return devlopersRepository.random();
 	}
-//	public Developers findRandom2() {
-	//	return devlopersRepository.random2();
-	//}
-
 	public List<Developers>listAll(){
 		return devlopersRepository.findAll();
 	}
