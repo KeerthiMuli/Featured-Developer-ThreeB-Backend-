@@ -34,15 +34,4 @@ public class DevelopersService {
 		return devlopersRepository.findAll();
 	}
 
-	public void save(Developers developer) {
-		devlopersRepository.save(developer);
-	}
-
-	public Developers get(String developerId) {
-		return devlopersRepository.findById(developerId).get();
-	}
-
-	public void delete(String developerId) {
-		devlopersRepository.deleteById(developerId);
-	}
 }
