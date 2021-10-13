@@ -40,16 +40,5 @@ public class DevelopersController {
 	 return service.listAll();
  }
  
-    //To get list of developers by Id
-
-   @GetMapping("/developers/getbyId/{developerId}")
-public ResponseEntity<Developers> getbyId(@PathVariable String developerId) {
-    try {   
-        Developers developers = service.get(developerId);
-        return new ResponseEntity<Developers>(developers, HttpStatus.OK);
-    } catch (NoSuchElementException e) {
-        return new ResponseEntity<Developers>(HttpStatus.NOT_FOUND);
-    }      
-} 
 
 }
