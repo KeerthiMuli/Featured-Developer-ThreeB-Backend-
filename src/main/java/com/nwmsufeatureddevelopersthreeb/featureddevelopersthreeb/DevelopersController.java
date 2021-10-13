@@ -11,7 +11,6 @@ import org.springframework.http.*;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.*;
  
-
 /**
  *
  * @author s541906
@@ -28,11 +27,6 @@ public class DevelopersController {
    public Developers random() {
     return service.findRandom() ;
 }
- //  @GetMapping("/developers/random2")
- //  public Developers random2() {
-	   
- // return service.findRandom2();
-//}
       
  // To get list of all of developers
  @GetMapping("/developers/getall")
