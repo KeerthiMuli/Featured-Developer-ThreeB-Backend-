@@ -19,6 +19,5 @@ import org.springframework.stereotype.Repository;
 public interface DevelopersRepository extends JpaRepository<Developers, String> {
      @Query(value ="SELECT * FROM Developers ORDER BY random() LIMIT 1", nativeQuery=true)
      public  Developers random();  
-   // @Query(value = "SELECT * FROM developers where fetchedon = current_date limit 1", nativeQuery=true)
-   // public  Developers random2();
+
 }
