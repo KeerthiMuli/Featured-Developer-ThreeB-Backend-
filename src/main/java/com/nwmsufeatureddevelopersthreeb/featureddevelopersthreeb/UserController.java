@@ -8,6 +8,24 @@ public class UserController {
 	 @Autowired
 	    UserRepository userRepository;
 	 // User Registration
-	
+	 @RequestMapping(value = "/users/register", method = RequestMethod.POST)
+	 //   @GetMapping("/users/register")
+	    public UserStatus registerUser(@Valid @RequestBody User newUser) {
+	        List<User> users = userRepository.findAll();
+
+	        System.out.println("New user: " + newUser.toString());
+
+	        for (User user : users) {
+	            System.out.println("Registered user: " + newUser.toString());
+
+	            if (user.equals(newUser)) {
+	                System.out.println("User Already exists!");
+	                return UserStatus.USER_ALREADY_EXISTS;
+	            }
+	        }
+
+	        userRepository.save(newUser);
+	        return UserStatus.SUCCESS;
+	    }
 
 }
