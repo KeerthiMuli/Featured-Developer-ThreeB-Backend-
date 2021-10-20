@@ -42,5 +42,20 @@ public class UserController {
 
 	        return UserStatus.FAILURE;
 	    }
+	 // User Logout
+	    @PostMapping("/users/logout")
+	    public UserStatus logUserOut(@Valid @RequestBody User user) {
+	        List<User> users = userRepository.findAll();
+
+	        for (User other : users) {
+	            if (other.equals(user)) {
+	                user.setLoggedIn(false);
+	                userRepository.save(user);
+	                return UserStatus.SUCCESS;
+	            }
+	        }
+
+	        return UserStatus.FAILURE;
+	    }
 
 }
