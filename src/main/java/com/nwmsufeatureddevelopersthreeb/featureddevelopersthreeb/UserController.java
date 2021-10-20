@@ -27,5 +27,20 @@ public class UserController {
 	        userRepository.save(newUser);
 	        return UserStatus.SUCCESS;
 	    }
+	//User Login
+	    @PostMapping("/users/login")
+	    public UserStatus loginUser(@Valid @RequestBody User user) {
+	        List<User> users = userRepository.findAll();
+
+	        for (User other : users) {
+	            if (other.equals(user)) {
+	                user.setLoggedIn(true);
+	                userRepository.save(user);
+	                return UserStatus.SUCCESS;
+	            }
+	        }
+
+	        return UserStatus.FAILURE;
+	    }
 
 }
