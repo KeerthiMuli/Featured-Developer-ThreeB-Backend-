@@ -24,8 +24,6 @@ public class User {
 	private @NotBlank String password;
 	@Column(name = "loggedin")
 	private @NotBlank boolean loggedIn;
-	@Column(name = "reset_token")
-	private String resetToken;
     
 
 	public User() {
@@ -35,7 +33,7 @@ public class User {
 		this.username = username;
 		this.password = password;
 		this.loggedIn = false;
-		this.resetToken = resetToken;
+		
 	}
 
 	public long getId() {
@@ -66,14 +64,6 @@ public class User {
 		this.loggedIn = loggedIn;
 	}
 	
-	public String getResetToken() {
-		return resetToken;
-	}
-
-	public void setResetToken(String resetToken) {
-		this.resetToken = resetToken;
-	}
-
 	@Override
 	public boolean equals(Object o) {
 		if (this == o)
@@ -92,6 +82,6 @@ public class User {
 	@Override
 	public String toString() {
 		return ( "id=" + id + ", username=" + username +", password=" + password +
-				 ", loggedIn=" + loggedIn + ", resetToken=" + resetToken);
+				 ", loggedIn=" + loggedIn);
 	}
 }
