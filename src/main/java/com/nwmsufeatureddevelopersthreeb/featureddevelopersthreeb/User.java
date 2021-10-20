@@ -31,7 +31,48 @@ public class User {
 	public User() {
 	}
 
+	public User(@NotBlank String username, @NotBlank String password, String resetToken) {
+		this.username = username;
+		this.password = password;
+		this.loggedIn = false;
+		this.resetToken = resetToken;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public boolean isLoggedIn() {
+		return loggedIn;
+	}
+
+	public void setLoggedIn(boolean loggedIn) {
+		this.loggedIn = loggedIn;
+	}
 	
+	public String getResetToken() {
+		return resetToken;
+	}
+
+	public void setResetToken(String resetToken) {
+		this.resetToken = resetToken;
+	}
 
 	@Override
 	public boolean equals(Object o) {
