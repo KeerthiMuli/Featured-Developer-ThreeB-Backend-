@@ -13,3 +13,5 @@ When users log in, this app will show information about the developers in the GD
    ## [Link to Proposal ](https://github.com/KeerthiMuli/Featured-Developer-Proposal/blob/main/Proposal.md)
   
    ## [Link to RFP ](https://github.com/akhilmallepally/featured-developers/)
+    
+   ## [Link to FrontEnd Development Repo ](https://github.com/KeerthiMuli/Featured-Developer-ThreeB-FrontEnd)
