@@ -32,11 +32,9 @@ public class Developers {
     private String Linkedinurl; 
     @Column(name="githuburl")
     private String Githuburl;
+
     @Column(name="image")
-    private String Image;
-  //  @Column(name="fetchedon")
-   // private String FetchedOn;
-    
+     private  String Image;    
     
    
     public String getDeveloperId() {
@@ -98,24 +96,17 @@ public class Developers {
     public String getImage() {
         return Image;
     }
-    public void setImage(String Image) {
+    public  void setImage(String Image) {
         this.Image = Image;
     }
-   // public String getFetchedOn() {
-  //      return FetchedOn;
-  //  }
-   // public void setFetchedOn(String FetchedOn ) {
-    //    return FetchedOn;
-  //  }
+
     
         @Override
     public String toString() {
         return "Developers{" + "DeveloperId=" + developerId + ", FullName=" + 
         		fullName + ", Emailaddress=" + Emailaddress + ", Goals=" + 
                 Goals + ", Skills=" + Skills + ", Linkedinurl=" + Linkedinurl + ", "
-                + "Githuburl=" + Githuburl + ", Image=" + Image +'}';
+                + "Githuburl=" + Githuburl + ",Image=" + Image +'}';
     }
-        // + ", FetchedOn=" + FetchedOn
-
     
 }
