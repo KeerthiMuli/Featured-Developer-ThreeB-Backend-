@@ -7,6 +7,7 @@ package com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.*;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -18,6 +19,14 @@ import org.springframework.web.bind.annotation.*;
 public class DevelopersController {
 	@Autowired
 	private DevelopersService service;
+	
+	// To get one Developer Randomly
+		@Scheduled(cron = "0 0 */8 * * *")
+		@GetMapping("/developers/random")
+		public Developers random() {
+			return service.display();
+		}
+
 	// To get list of all of developers
 	@GetMapping("/developers/getall")
 	public List<Developers> getall() {
