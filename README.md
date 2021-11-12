@@ -1,7 +1,9 @@
 # Featured-Developer-ThreeB-Backend
 
+## App Focus
 When users log in, this app will show information about the developers in the GDP1 class.
 
+## Key Elements Of Stack
 <ol>
 <li> We intend to use Java as the backend language with SpringBoot as Framework, as it facilitates the development of rapid app solutions.</li>
 <li> Heroku as backend free app host, as it enables to host our code in various languages relatively easily.</li>
