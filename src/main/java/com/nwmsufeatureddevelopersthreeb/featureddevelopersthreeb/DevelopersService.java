@@ -24,21 +24,21 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class DevelopersService {
 	@Autowired
-	private DevelopersRepository devlopersRepository;
+	private DevelopersRepository developersRepository;
 	Set<Developers> dev = new HashSet<Developers>();
 	public Developers dee;
      public Developers  findRandom() {
 		
-		return devlopersRepository.random();
+		return developersRepository.random();
 		
 	}
 
 	public List<Developers>listAll(){
-		return devlopersRepository.findAll();
+		return developersRepository.findAll();
 	}
     public Developers save(Developers developer) {
-		 return devlopersRepository.save(developer);
+		 return developersRepository.save(developer);
 	}
-
+  
 
 }
