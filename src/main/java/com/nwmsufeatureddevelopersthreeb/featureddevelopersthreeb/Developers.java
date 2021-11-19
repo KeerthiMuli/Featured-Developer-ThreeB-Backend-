@@ -35,7 +35,7 @@ public class Developers {
 
     @Column(name="image")
      private  String Image;    
-    
+  
    
     public String getDeveloperId() {
         return developerId;

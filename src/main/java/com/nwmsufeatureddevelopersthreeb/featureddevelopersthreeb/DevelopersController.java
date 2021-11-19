@@ -27,9 +27,10 @@ public class DevelopersController {
 			return service.display();
 		}
 
-	// To get list of all of developers
+	// To get list of all of Developers
 	@GetMapping("/developers/getall")
 	public List<Developers> getall() {
 		return service.listAll();
 	}
+
 }
