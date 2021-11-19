@@ -21,11 +21,11 @@ public class DevelopersController {
 	private DevelopersService service;
 	
 	// To get one Developer Randomly
-		@Scheduled(cron = "0 0 */8 * * *")
-		@GetMapping("/developers/random")
-		public Developers random() {
-			return service.display();
-		}
+	//	@Scheduled(cron = "0 0 */8 * * *")
+	//	@GetMapping("/developers/random")
+	//	public Developers random() {
+	//		return service.display();
+		//}
 
 	// To get list of all of Developers
 	@GetMapping("/developers/getall")
