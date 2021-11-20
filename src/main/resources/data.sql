@@ -17,7 +17,10 @@ INSERT INTO public.developers(
 	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
 	VALUES
 ('S542403','Akhil Kumar Reddy Mallepally','mallepallyakhil@gmail.com','MLOps Engineer',
-'Django, NumPy, Pandas, Matplotlib, Keras, Scikit-learn, seaborn',
+'Languages : Python, Java, sql
+Development tools : Git, Visual Studio, tableau
+Libraries & Frameworks : Django, NumPy, Pandas, Matplotlib, Keras, Scikit-learn, seaborn
+System Administration : Linux',
 'https://www.linkedin.com/in/akhil-mallepally/','https://github.com/akhilmallepally/','https://logos.textgiraffe.com/logos/logo-name/Akhil-designstyle-summer-m.png');
 INSERT INTO public.developers(
 	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
@@ -106,3 +109,119 @@ INSERT INTO public.developers(
 ('S542269','Shivaram Kothapally','shivaramkothapally177@gmail.com','To became a leader in the software market',
 'Html, java, Nodejs',':www.linkedin.com/in/shivaram-kothapally-a813aa179',
 'https://github.com/shivaramkothapally','https://media-exp1.licdn.com/dms/image/C5603AQFDPiwt0X8HzQ/profile-displayphoto-shrink_400_400/0/1612484057453?e=1641427200&v=beta&t=uJWGZN82NOZjoKGy0dkDQRMC60hjcZA5c9KLKL_ln6M');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542271','Tejaswi Reddy Nallavolu','Tejaswireddynallavolu@gmail.com','To become a Front-end developer',
+'HTML,CSS, JavaScript, Bootstrap, Java','https://www.linkedin.com/in/tejaswi-reddy-3a69a417b/',
+'https://github.com/tejaswinallavolu','https://media-exp1.licdn.com/dms/image/C4E03AQHcsgrpVSxBfg/profile-displayphoto-shrink_400_400/0/1633751606973?e=1641427200&v=beta&t=QSePPcEuCkLbLzTDgM6k-Ax1ft8W355mIk_Ipq8YR0g');
+
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542048','Vivek Tadiparthi','tadsaivivekreddy@gmail.com','Aspire to be an App developer and have a startup of my own.',
+'Java, Python, Android development','https://www.linkedin.com/in/vivektadiparthi/',
+'https://github.com/vivektadiparthi','https://media-exp1.licdn.com/dms/image/C4D03AQEmUX5ba_R4gA/profile-displayphoto-shrink_400_400/0/1610239019881?e=1641427200&v=beta&t=oIrdT92EvcW3hHyPfxgp1MxBgOdOsuahtckl5m3GZOc');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S541903','Pramod Reddy Gonegari','gonegaripramodreddy@gmail.com','To build a product based startup and become an entrepreneur.',
+'Mobile and Web Application Development, Vue, Ionic, Java, JavaScript .','https://www.linkedin.com/in/pramod-reddy-gonegari/',
+'https://github.com/pramod096','https://media-exp1.licdn.com/dms/image/C5603AQG_WTWVfbSuDA/profile-displayphoto-shrink_400_400/0/1602683531447?e=1641427200&v=beta&t=HJZnN1dFlC98XkJkSMWMcJhOWBDl80Di-l2-jCy6nw0');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542264','Rasagna Reddy Banda','rasagna.reddyc@gmail.com','To work as a Frontend developer',
+'Java, HTML, CSS, Java script','https://www.linkedin.com/in/rasagna-reddy-86a39a170/',
+'https://github.com/Rasagna0409','https://media-exp1.licdn.com/dms/image/C5603AQG-GE4WVT27bw/profile-displayphoto-shrink_400_400/0/1624504209186?e=1641427200&v=beta&t=1TQfk1xETmJ6knM_8UdyEb4ZTT-nKK1PeQTFWtCqBqI');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542295','Abhilash Dhumala','dhumala.abhilash@gmail.com','To be a Front-end developer.',
+'Java, HTML, UFT.',' https://www.linkedin.com/in/abhilash-dhumala-4b4ab9172/',
+'https://github.com/Abhilash15','https://logos.textgiraffe.com/logos/logo-name/Abhilash-designstyle-summer-m.png');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542046','Akanksha Sudhagoni','akankshagoud.s@gmail.com','To become a Full-stack developer',
+'Html, Java, CSS.','https://www.linkedin.com/in/akanksha-goud-aa0ab8211',
+'https://github.com/S542046','https://media-exp1.licdn.com/dms/image/C4E03AQH95DFFa0Mhpg/profile-displayphoto-shrink_400_400/0/1622045493003?e=1641427200&v=beta&t=dtUUvj0ht76URCUdNUC-9f_TpaPT0jWdzcq-aFWeL8Q');
+
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542308','Arnav Akula','arnavakula3@gmail.com','Data engineer',
+'Python , java, web techonolgies ','https://www.linkedin.com/in/arnav-akula-76a649200/',
+'https://github.com/Arnavakula7474','https://media-exp1.licdn.com/dms/image/C4E03AQEbJskva37EAg/profile-displayphoto-shrink_400_400/0/1620751830859?e=1641427200&v=beta&t=1YMRkUsi14e0KnPDB-Hzmh_pDrB0QYBYFECsAtTBuKU');
+
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542409','Harshavardhan Kurra','harshavardhankurra4@gmail.com','Software Developer',
+'Python, Java, Html, JavaScript','https://www.linkedin.com/in/harsha-kurra-b25b3b177',
+'https://github.com/harshakurra123','https://media-exp1.licdn.com/dms/image/C5103AQHO2jMh_vVajA/profile-displayphoto-shrink_400_400/0/1545151738190?e=1641427200&v=beta&t=lWB9qGy1nbYIlhORUrH4P6O_SOxtfYn2oCiExvaw3ns');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S541669','Sanjay Saripalli','sanjaysaripalli96@gmail.com','To be an Machine Learning Engineer',
+'Languages : Python, Java, SQL
+Libraries & Frameworks : NumPy, Pandas, Matplotlib, Keras, Scikit-learn, Seaborn','https://www.linkedin.com/in/sanjay-saripalli-57242b203/',
+'https://github.com/sanjay-13','https://media-exp1.licdn.com/dms/image/C5603AQEYSZQDPDbktg/profile-displayphoto-shrink_400_400/0/1612546441551?e=1641427200&v=beta&t=8N2osG3fPA6xQJ5ocwb2h98Wb5HHuAuBGtroAHQ75Lc');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542423','Rohit Reddy Chandupatla','rohit.chandupatla@gmail.com','To become a QA Automation Engineer',
+'Java, HTML, CSS, JavaScript, bootstrap.','https://www.linkedin.com/in/rohitchandupatla/',
+'https://github.com/Rohitreddz','https://cpng.pikpng.com/pngl/s/548-5486766_rohit-wallpaper-name-clipart.png');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542294','Prasanna Arla','prasannareddyarla@gmail.com','To become an software developer',
+'Java, HTML, CSS, JavaScript','https://www.linkedin.com/in/prasanna-reddy-arla-0b0390222/',
+'https://www.linkedin.com/in/prasanna-reddy-arla-0b0390222/','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPwQzSmkyamQKKY7jYUZhSon--2IyuU-dUeQ&usqp=CAU');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542414','Priyanka Thambabathula','priyankathambabathula1998@gmail.com','To become a front end developer',
+'Java,Python,HTML,CSS',' https://www.linkedin.com/in/priyanka-thambabathula-83478318b/',
+'https://github.com/Priyanka1818','https://logos.textgiraffe.com/logos/logo-name/Priyanka-designstyle-birthday-m.png');
+
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542393','Hemanth Venkata Reddy Telluri','tellurireddy1998@gmail.com','Want to become a front end developer',
+'Java,Python,HTML,CSS','Not available',
+'https://github.com/hemanth8056','http://fontstattoo.com/udata/fonts/tattoo/1235af4539326a985bb2043495aaee83.jpg');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542041','Sai Kiran Reddy Enugala','saikiranreddy0007@gmail.com','To become a cloud developer',
+'Java , HTML , CSS','https://www.linkedin.com/in/sai-kiran-reddy-enugala-a06624138/',
+'https://github.com/saikiranreddyenugala','https://logos.textgiraffe.com/logos/logo-name/Kiran-designstyle-summer-m.png');
+
+INSERT INTO public.developers(
+	developerid, fullname, emailaddress, goals, skills, linkedinurl, githuburl,image)
+	VALUES 
+('S542357','Giridhar Addagalla','giridhar196@gmail.com','run my software firm successfully.',
+'.Net, Java, Angular and HTML','Not available',
+'https://github.com/giridhar196','https://logos.textgiraffe.com/logos/logo-name/Giridhar-designstyle-summer-m.png');
+
+
+
+
+
+
