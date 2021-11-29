@@ -60,6 +60,9 @@ public class DevelopersService {
 		}
 
 	}
-    
+    public Developers getDee() {
+	    	return dee;
+	    }
+
     
 }
