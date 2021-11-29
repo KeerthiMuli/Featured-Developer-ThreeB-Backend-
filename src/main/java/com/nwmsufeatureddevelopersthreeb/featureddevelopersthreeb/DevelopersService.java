@@ -47,5 +47,19 @@ public class DevelopersService {
 			dev.clear();
 			return display();
 		}
+		else if (!dev.contains(o)) {
+			dev.add(o);
+			Iterator<Developers> i = dev.iterator();
+			while (i.hasNext()) {
+				System.out.println(i.next().toString());
+			}
+			return o;
+
+		} else {
+			return display();
+		}
+
+	}
+    
     
 }
