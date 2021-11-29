@@ -32,11 +32,20 @@ public class DevelopersService {
 		return developersRepository.random();
 		
 	}
-
 	public List<Developers>listAll(){
 		return developersRepository.findAll();
 	}
     public Developers save(Developers developer) {
 		 return developersRepository.save(developer);
 	}
+    public Developers display() {
+		Developers o = new Developers();
+		o = findRandom();
+		dee = o;
+
+		if (dev.size() > 6) {
+			dev.clear();
+			return display();
+		}
+    
 }
