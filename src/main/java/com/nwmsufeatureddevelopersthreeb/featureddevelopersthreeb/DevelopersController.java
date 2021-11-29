@@ -26,6 +26,12 @@ public class DevelopersController {
 		public Developers random() {
 			return service.display();
 		}
+        // To get one developer per day randomly
+        @RequestMapping(value = "/developers/randomshow", method = RequestMethod.GET)
+	public Developers show() {
+		return service.getDee();
+
+	}
 	// To get list of all of Developers
 	@GetMapping("/developers/getall")
 	public List<Developers> getall() {
