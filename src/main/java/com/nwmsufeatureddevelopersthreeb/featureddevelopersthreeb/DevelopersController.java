@@ -21,8 +21,8 @@ public class DevelopersController {
 	private DevelopersService service;
 	
 	 // To get one Developer Randomly
-		@Scheduled(cron = "0 0 6 * * *", zone = "CST")
-	        @GetMapping("/developers/random")
+		@Scheduled(cron = "0 0 */6 * * *", zone = "CST")
+	      @GetMapping("/developers/random")
 		public Developers random() {
 			return service.display();
 		}
