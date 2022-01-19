@@ -16,7 +16,7 @@ When users log in, this app will show information about the developers in the GD
   
    ## [Link to RFP ](https://github.com/akhilmallepally/featured-developers/)
     
-   ## [Link to FrontEnd Development Repo ](https://github.com/KeerthiMuli/Featured-Developer-ThreeB-FrontEnd)
+   ## [Link to FrontEnd Development Repo ](https://github.com/sagajayakumar/FeaturedDeveloperVue)
     
    ## References
  Below are the links from where we have downlaoded the images used in the application
