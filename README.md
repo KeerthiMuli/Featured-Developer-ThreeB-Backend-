@@ -21,7 +21,7 @@ When users log in, this app will show information about the developers in the GD
    ## References
  Below are the links from where we have downlaoded the images used in the application
   <ol>
- <li> https://www.textgiraffe.com/Akhil/ </li>
+    <li>  https://www.textgiraffe.com/Akhil/ </li>
    <li> https://www.textgiraffe.com/Amulya/</li>
    <li> https://www.textgiraffe.com/Khushal/</li>
    <li> https://www.textgiraffe.com/Manoj/ </li>
@@ -32,6 +32,24 @@ When users log in, this app will show information about the developers in the GD
    <li>https://clickbabynames.com/29592/narendra-baby-name-boy</li>
    <li> https://www.textgiraffe.com/Giridhar/ </li>
    <li> https://www.textgiraffe.com/Abhilash/ </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Nikitha </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Manideep </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Abhilash </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=jayakumar </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Keerthi </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Naveen </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Sathya </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Shivaram </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Tejeswi </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Vivek </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Pramod </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Rasagna </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Abhilash%20Dhumala </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Akansha </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Arnav </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Harsha </li>
+   <li> https://www.textgiraffe.com/Name-Generator?text=Sanjay </li>
+   
  </ol> 
        
     
