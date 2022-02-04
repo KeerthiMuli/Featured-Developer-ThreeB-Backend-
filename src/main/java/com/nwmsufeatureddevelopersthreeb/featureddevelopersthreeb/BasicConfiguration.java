@@ -17,7 +17,7 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
                                 .antMatchers(HttpMethod.GET, "/developers/random").permitAll()
 				.antMatchers(HttpMethod.GET, "/developers/randomshow").permitAll()
                                 .antMatchers(HttpMethod.GET, "/developers/getall")      
-                                .permitAll().anyRequest().authenticated().and().oauth2Login().and().logout();
+                                .permitAll().anyRequest().authenticated();
 	}
        
 }
