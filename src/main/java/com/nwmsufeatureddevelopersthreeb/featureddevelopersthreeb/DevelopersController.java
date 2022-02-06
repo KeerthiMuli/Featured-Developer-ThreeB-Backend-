@@ -5,6 +5,7 @@
  */
 package com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb;
 
+import io.swagger.v3.oas.annotations.Operation;
 import java.util.List;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -15,27 +16,29 @@ import org.springframework.web.bind.annotation.*;
  * @author s541906
  */
 @CrossOrigin
+
 @RestController
 public class DevelopersController {
 	@Autowired
 	private DevelopersService service;
-	
-	 // To get one Developer Randomly
+	@Operation(summary = "To get one Developer randomly", description = "This display developers details on a random basis")
+	 // To get one Developer details Randomly
 		@Scheduled(cron = "0 0 10 * * *", zone = "CST")
 	      @GetMapping("/developers/random")
 		public Developers random() {
 			return service.display();
 		}
-        // To get one developer per day randomly
+    @Operation(summary = "To get one Developer per day randomly", description = "This display developers details randomly once per day returned from /developers/random")
+        // To get one developer details randomly once per day 
         @RequestMapping(value = "/developers/randomshow", method = RequestMethod.GET)
 	public Developers show() {
 		return service.getDee();
 
 	}
-	// To get list of all of Developers
+     @Operation(summary = "To get list of all of Developers details", description = "This display list of all developers details")
+	// To get list of all of Developers details
 	@GetMapping("/developers/getall")
 	public List<Developers> getall() {
 		return service.listAll();
 	}
-
 }
