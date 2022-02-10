@@ -95,11 +95,16 @@
             <version>3.0.0</version>
             <type>jar</type>
         </dependency>
-         <dependency>
+      <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.5.9</version>
         </dependency>
+       <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-oauth2-client</artifactId>
+    </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -118,5 +123,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
