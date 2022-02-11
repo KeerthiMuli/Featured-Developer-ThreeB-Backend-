@@ -36,4 +36,37 @@ public class LogOut extends SecurityContextLogoutHandler {
         this.clientRegistrationRepository = clientRegistrationRepository;
     }
 
-}
+    /**
+     * Delegates to {@linkplain SecurityContextLogoutHandler} to log the user out of the application, and then logs
+     * the user out of Auth0.
+     *
+     * @param httpServletRequest the request.
+     * @param httpServletResponse the response.
+     * @param authentication the current authentication.
+     */
+    @Override
+    public void logout(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
+                       Authentication authentication) {
+
+        // Invalidate the session and clear the security context
+        super.logout(httpServletRequest, httpServletResponse, authentication);
+
+        // Build the URL to log the user out of Auth0 and redirect them to the home page.
+        // URL will look like https://YOUR-DOMAIN/v2/logout?clientId=YOUR-CLIENT-ID&returnTo=http://localhost:3000
+        String issuer = (String) getClientRegistration().getProviderDetails().getConfigurationMetadata().get("issuer");
+        String clientId = getClientRegistration().getClientId();
+        String returnTo = ServletUriComponentsBuilder.fromCurrentContextPath().build().toString();
+
+       String logoutUrl = UriComponentsBuilder
+               .fromHttpUrl(issuer + "v2/logout?client_id={clientId}&returnTo={returnTo}")
+                .encode()
+               .buildAndExpand(clientId, returnTo)
+                .toUriString();
+
+        try {
+           httpServletResponse.sendRedirect(logoutUrl);
+       } catch (IOException ioe) {
+            // Handle or log error redirecting to logout URL
+        }
+    }
+
