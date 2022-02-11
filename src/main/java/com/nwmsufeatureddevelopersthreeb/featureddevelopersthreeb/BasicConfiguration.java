@@ -14,16 +14,21 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 public class BasicConfiguration extends WebSecurityConfigurerAdapter {
      
+        private final LogOut logoutHandler;
+
+        public BasicConfiguration(LogOut logoutHandler) {
+        this.logoutHandler = logoutHandler;
+    }
+
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable().authorizeRequests().antMatchers("/").permitAll()
                                 .antMatchers(HttpMethod.GET, "/developers/random").permitAll()
 				.antMatchers(HttpMethod.GET, "/developers/randomshow").permitAll()
                                 .antMatchers(HttpMethod.GET, "/developers/getall").permitAll()
-                                .antMatchers("/**").permitAll()
-                                .mvcMatchers("swagger-ui.html")
- 
-                                .permitAll().anyRequest().authenticated();
+                            //    .antMatchers("/**").permitAll()
+                                  
+                                .permitAll().anyRequest().authenticated().and().oauth2Login().and().logout();
 	}
 
 }
