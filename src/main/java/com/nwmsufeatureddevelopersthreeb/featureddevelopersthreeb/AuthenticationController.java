@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @Controller
 public class AuthenticationController {
-    @GetMapping("/")
+    @GetMapping("/loginpage")
     public String home(Model model, @AuthenticationPrincipal OidcUser principal) {
         return "auth";
     }
