@@ -28,7 +28,7 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
                                 .antMatchers(HttpMethod.GET, "/developers/getall").permitAll()
                             //    .antMatchers("/**").permitAll()
                                 .mvcMatchers("swagger-ui.html").permitAll()
-                                .mvcMatchers("/loginpage").permitAll()
+                                .mvcMatchers("/").permitAll()
                                 .mvcMatchers("/logout")          
                                 .permitAll().anyRequest().authenticated().and().oauth2Login().and().logout();
 	}
