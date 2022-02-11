@@ -70,3 +70,13 @@ public class LogOut extends SecurityContextLogoutHandler {
         }
     }
 
+    /**
+     * Gets the Spring ClientRegistration, which we use to get the registered client ID and issuer for building the
+     * {@code returnTo} query parameter when calling the Auth0 logout API.
+     *
+     * @return the {@code ClientRegistration} for this application.
+     */
+    private ClientRegistration getClientRegistration() {
+        return this.clientRegistrationRepository.findByRegistrationId("auth0");
+    }
+}
