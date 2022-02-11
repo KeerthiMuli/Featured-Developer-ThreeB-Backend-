@@ -36,7 +36,7 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
                                 .mvcMatchers("/logout")          
                                 .permitAll().anyRequest().authenticated().and().oauth2Login().and().logout();
 	}
-         @Bean
+       /*  @Bean
     ReactiveClientRegistrationRepository getRegistration(
             @Value("${spring.security.oauth2.client.provider.my-platform.token-uri}") String tokenUri,
             @Value("${spring.security.oauth2.client.registration.my-platform.client-id}") String clientId,
@@ -52,5 +52,5 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
                 .scope(scope)
                 .build();
         return new InMemoryReactiveClientRegistrationRepository(registration);
-    }
+    }*/
 }
