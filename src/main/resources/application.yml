@@ -13,7 +13,8 @@ spring:
       client:
         registration:
           auth0:
-            
+            client-id: ""
+            client-secret: ""
             scope:
               - openid
               - profile
