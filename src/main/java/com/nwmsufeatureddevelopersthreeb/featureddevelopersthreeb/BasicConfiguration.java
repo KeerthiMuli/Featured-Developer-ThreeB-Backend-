@@ -1,17 +1,17 @@
 package com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb;
 
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
+//import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.oauth2.client.registration.ClientRegistration;
-import org.springframework.security.oauth2.client.registration.InMemoryReactiveClientRegistrationRepository;
-import org.springframework.security.oauth2.client.registration.ReactiveClientRegistrationRepository;
-import org.springframework.security.oauth2.core.AuthorizationGrantType;
+//import org.springframework.security.oauth2.client.registration.ClientRegistration;
+//import org.springframework.security.oauth2.client.registration.InMemoryReactiveClientRegistrationRepository;
+//import org.springframework.security.oauth2.client.registration.ReactiveClientRegistrationRepository;
+//import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 
@@ -36,7 +36,7 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
                                 .mvcMatchers("/logout")          
                                 .permitAll().anyRequest().authenticated().and().oauth2Login().and().logout();
 	}
-        @Bean
+       /* @Bean
     ReactiveClientRegistrationRepository getRegistration(
             @Value("${spring.security.oauth2.client.provider.my-platform.token-uri}") String tokenUri,
             @Value("${spring.security.oauth2.client.registration.my-platform.client-id}") String clientId,
@@ -52,5 +52,5 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
                 .scope(scope)
                 .build();
         return new InMemoryReactiveClientRegistrationRepository(registration);
-    }
+    }*/
 }
