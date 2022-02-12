@@ -13,8 +13,8 @@ spring:
       client:
         registration:
           auth0:
-            client-id: {CLIENT_ID}
-            client-secret: {CLIENT_SECRET}
+            client-id: {AUTH0_CLIENT_ID}
+            client-secret: {AUTH0_CLIENT_SECRET}
             scope:
               - openid
               - profile
@@ -22,4 +22,4 @@ spring:
         provider:
           auth0:
             # trailing slash is important!
-            issuer-uri: https://{DOMAIN}/
+            issuer-uri: https://{AUTH0_DOMAIN}/
