@@ -24,6 +24,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Install with Maven
+      run: mvn -B install --file pom.xml
     - name: Test with Maven
       run: mvn -B test --file pom.xml
     - name: Google Java Format
