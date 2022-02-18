@@ -10,13 +10,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
- *
  * @author s541906
  */
 @Repository
 public interface DevelopersRepository extends JpaRepository<Developers, String> {
-	
-	public static final String Find_Developers = "SELECT * FROM Developers ORDER BY random() LIMIT 1";
-    @Query(value =Find_Developers, nativeQuery=true)
-    public  Developers  random();  
+
+  public static final String Find_Developers = "SELECT * FROM Developers ORDER BY random() LIMIT 1";
+
+  @Query(value = Find_Developers, nativeQuery = true)
+  public Developers random();
 }

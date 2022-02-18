@@ -10,15 +10,19 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
- 
+
 @Configuration
 public class OpenApiConfig {
- 
-    @Bean
-    public OpenAPI customOpenAPI() {
-        return new OpenAPI()
-                .components(new Components())
-                .info(new Info().title("Featured Developer").description(
-                        "This App mainly focus to provide information about the developers in the GDP class."));
-    }
+
+  @Bean
+  public OpenAPI customOpenAPI() {
+    return new OpenAPI()
+        .components(new Components())
+        .info(
+            new Info()
+                .title("Featured Developer")
+                .description(
+                    "This App mainly focus to provide information about the developers in the GDP"
+                        + " class."));
+  }
 }

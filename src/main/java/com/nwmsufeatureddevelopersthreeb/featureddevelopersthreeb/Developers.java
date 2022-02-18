@@ -11,102 +11,120 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- *
  * @author s541906
  */
 @Entity
-@Table(name="developers",schema = "public")
+@Table(name = "developers", schema = "public")
 public class Developers {
-    @Id
-    @Column(name="developerid")
-    private String developerId;
-    @Column(name="fullname")
-    private String fullName;
-    @Column(name="emailaddress")
-    private String Emailaddress;
-    @Column(name="goals")
-    private String Goals;
-    @Column(name="skills")
-    private String Skills;
-    @Column(name="linkedinurl")
-    private String Linkedinurl; 
-    @Column(name="githuburl")
-    private String Githuburl;
+  @Id
+  @Column(name = "developerid")
+  private String developerId;
 
-    @Column(name="image")
-     private  String Image;    
-  
-   
-    public String getDeveloperId() {
-        return developerId;
-    }
+  @Column(name = "fullname")
+  private String fullName;
 
-    public void setDeveloperId(String developerId) {
-        this.developerId = developerId;
-    }
+  @Column(name = "emailaddress")
+  private String Emailaddress;
 
-    public String getFullName() {
-        return fullName;
-    }
+  @Column(name = "goals")
+  private String Goals;
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
+  @Column(name = "skills")
+  private String Skills;
 
-    public String getEmailaddress() {
-        return Emailaddress;
-    }
+  @Column(name = "linkedinurl")
+  private String Linkedinurl;
 
-    public void setEmailaddress(String Emailaddress) {
-        this.Emailaddress = Emailaddress;
-    }
+  @Column(name = "githuburl")
+  private String Githuburl;
 
-    public String getGoals() {
-        return Goals;
-    }
+  @Column(name = "image")
+  private String Image;
 
-    public void setGoals(String Goals) {
-        this.Goals = Goals;
-    }
+  public String getDeveloperId() {
+    return developerId;
+  }
 
-    public String getSkills() {
-        return Skills;
-    }
+  public void setDeveloperId(String developerId) {
+    this.developerId = developerId;
+  }
 
-    public void setSkills(String Skills) {
-        this.Skills = Skills;
-    }
+  public String getFullName() {
+    return fullName;
+  }
 
-    public String getLinkedinurl() {
-        return Linkedinurl;
-    }
+  public void setFullName(String fullName) {
+    this.fullName = fullName;
+  }
 
-    public void setLinkedinurl(String Linkedinurl) {
-        this.Linkedinurl = Linkedinurl;
-    }
+  public String getEmailaddress() {
+    return Emailaddress;
+  }
 
-    public String getGithuburl() {
-        return Githuburl;
-    }
+  public void setEmailaddress(String Emailaddress) {
+    this.Emailaddress = Emailaddress;
+  }
 
-    public void setGithuburl(String Githuburl) {
-        this.Githuburl = Githuburl;
-    }
+  public String getGoals() {
+    return Goals;
+  }
 
-    public String getImage() {
-        return Image;
-    }
-    public  void setImage(String Image) {
-        this.Image = Image;
-    }
+  public void setGoals(String Goals) {
+    this.Goals = Goals;
+  }
 
-    
-        @Override
-    public String toString() {
-        return "Developers{" + "DeveloperId=" + developerId + ", FullName=" + 
-        		fullName + ", Emailaddress=" + Emailaddress + ", Goals=" + 
-                Goals + ", Skills=" + Skills + ", Linkedinurl=" + Linkedinurl + ", "
-                + "Githuburl=" + Githuburl + ",Image=" + Image +'}';
-    }
-    
+  public String getSkills() {
+    return Skills;
+  }
+
+  public void setSkills(String Skills) {
+    this.Skills = Skills;
+  }
+
+  public String getLinkedinurl() {
+    return Linkedinurl;
+  }
+
+  public void setLinkedinurl(String Linkedinurl) {
+    this.Linkedinurl = Linkedinurl;
+  }
+
+  public String getGithuburl() {
+    return Githuburl;
+  }
+
+  public void setGithuburl(String Githuburl) {
+    this.Githuburl = Githuburl;
+  }
+
+  public String getImage() {
+    return Image;
+  }
+
+  public void setImage(String Image) {
+    this.Image = Image;
+  }
+
+  @Override
+  public String toString() {
+    return "Developers{"
+        + "DeveloperId="
+        + developerId
+        + ", FullName="
+        + fullName
+        + ", Emailaddress="
+        + Emailaddress
+        + ", Goals="
+        + Goals
+        + ", Skills="
+        + Skills
+        + ", Linkedinurl="
+        + Linkedinurl
+        + ", "
+        + "Githuburl="
+        + Githuburl
+        + ",Image="
+        + Image
+        + '}';
+  }
 }

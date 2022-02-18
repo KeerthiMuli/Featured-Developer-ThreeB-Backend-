@@ -12,13 +12,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- *
  * @author S541906
  */
 @Controller
 public class AuthenticationController {
-    @GetMapping("/")
-    public String home(Model model, @AuthenticationPrincipal OidcUser principal) {
-        return "auth";
-    }
+  @GetMapping("/")
+  public String home(Model model, @AuthenticationPrincipal OidcUser principal) {
+    return "auth";
+  }
 }

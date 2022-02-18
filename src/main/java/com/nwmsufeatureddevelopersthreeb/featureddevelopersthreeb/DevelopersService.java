@@ -5,64 +5,59 @@
  */
 package com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.Iterator;
 import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 /**
- *
  * @author s541906
  */
-
 @Service
 @Transactional
 public class DevelopersService {
-	@Autowired
-	private DevelopersRepository developersRepository;
-	Set<Developers> dev = new HashSet<Developers>();
-	public Developers dee;
-     public Developers  findRandom() {
-		
-		return developersRepository.random();
-		
-	}
-	public List<Developers>listAll(){
-		return developersRepository.findAll();
-	}
-    public Developers save(Developers developer) {
-		 return developersRepository.save(developer);
-	}
-    public Developers display() {
-		Developers o = new Developers();
-		o = findRandom();
-		dee = o;
+  @Autowired private DevelopersRepository developersRepository;
+  Set<Developers> dev = new HashSet<Developers>();
+  public Developers dee;
 
-		if (dev.size() > 6) {
-			dev.clear();
-			return display();
-		}
-		else if (!dev.contains(o)) {
-			dev.add(o);
-			Iterator<Developers> i = dev.iterator();
-			while (i.hasNext()) {
-				System.out.println(i.next().toString());
-			}
-			return o;
+  public Developers findRandom() {
 
-		} else {
-			return display();
-		}
+    return developersRepository.random();
+  }
 
-	}
-    public Developers getDee() {
-	    	return dee;
-	    }
+  public List<Developers> listAll() {
+    return developersRepository.findAll();
+  }
 
-    
+  public Developers save(Developers developer) {
+    return developersRepository.save(developer);
+  }
+
+  public Developers display() {
+    Developers o = new Developers();
+    o = findRandom();
+    dee = o;
+
+    if (dev.size() > 6) {
+      dev.clear();
+      return display();
+    } else if (!dev.contains(o)) {
+      dev.add(o);
+      Iterator<Developers> i = dev.iterator();
+      while (i.hasNext()) {
+        System.out.println(i.next().toString());
+      }
+      return o;
+
+    } else {
+      return display();
+    }
+  }
+
+  public Developers getDee() {
+    return dee;
+  }
 }

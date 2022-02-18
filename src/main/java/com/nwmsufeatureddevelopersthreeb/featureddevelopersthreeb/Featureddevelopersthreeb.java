@@ -7,11 +7,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
-public class Featureddevelopersthreeb{
-	public static void main(String[] args) {
-SpringApplication.run(Featureddevelopersthreeb.class, args);
-
-        }
-
+public class Featureddevelopersthreeb {
+  public static void main(String[] args) {
+    SpringApplication.run(Featureddevelopersthreeb.class, args);
+  }
 }
-                
