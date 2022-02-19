@@ -30,8 +30,15 @@ jobs:
       run: mvn -B test --file pom.xml
     - name: Google Java Format
       uses: axel-op/googlejavaformat-action@3.5.0
-    - name: Action For Semantic Release
-      uses: cycjimmy/semantic-release-action@v2.7.0
+    - name: Semantic Release
+      uses: cycjimmy/semantic-release-action@v2
+      with:
+          extra_plugins: |
+             @semantic-release/changelog@3.0.0
+             @semantic-release/git
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   lint:
     runs-on: windows-latest
     steps:
