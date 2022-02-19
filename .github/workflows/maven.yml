@@ -29,15 +29,7 @@ jobs:
     - name: Test with Maven
       run: mvn -B test --file pom.xml
     - name: Google Java Format
-      uses: axel-op/googlejavaformat-action@3.5.0
-  semantic:
-      runs-on: windows-latest
-      steps:
-      - uses: actions/checkout@master
-      - uses: go-semantic-release/action@v1
-        with:
-         github-token: ${{ secrets.GITHUB_TOKEN }}
-     
+      uses: axel-op/googlejavaformat-action@3.5.0   
   lint:
     runs-on: windows-latest
     steps:
