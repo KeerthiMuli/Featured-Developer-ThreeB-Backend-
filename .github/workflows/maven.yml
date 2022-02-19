@@ -45,7 +45,6 @@ jobs:
   semantic_release:
      runs-on: windows-latest
      steps:
-     - uses: actions/checkout@v1
-     - uses: go-semantic-release/action@v1
+     - uses: release-drafter/release-drafter@v5
        env:
          github-token: ${{ secrets.GITHUB_TOKEN }}
