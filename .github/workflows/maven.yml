@@ -34,6 +34,4 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Install Dependencies
-      run: mvn install @commitlint/config-conventional
     - uses: JulienKode/pull-request-name-linter-action@v0.5.0
