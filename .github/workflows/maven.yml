@@ -38,7 +38,6 @@ jobs:
   testcoverage:
      runs-on: windows-latest
      steps:
-     - run: mvn -B verify -P coverage --no-transfer-progress
      - uses: codecov/codecov-action@v1
        with:
           file: ./**/target/site/jacoco/jacoco.xml
