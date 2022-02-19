@@ -35,10 +35,17 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: JulienKode/pull-request-name-linter-action@v0.5.0
-  testCoverageReport:
+  test_coverage_report:
         runs-on: windows-latest
         steps:
          - uses: codecov/codecov-action@v1
            with:
              file: ./**/target/site/jacoco/jacoco.xml
              name: codecov
+  semantic_release:
+     runs-on: windows-latest
+     steps:
+     - uses: actions/checkout@v1
+     - uses: codfish/semantic-release-action@v1
+       with:
+         github-token: ${{ secrets.GITHUB_TOKEN }}
