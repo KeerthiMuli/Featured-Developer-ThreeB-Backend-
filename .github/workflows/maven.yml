@@ -46,5 +46,3 @@ jobs:
      runs-on: windows-latest
      steps:
      - uses: release-drafter/release-drafter@v5
-       env:
-         github-token: ${{ secrets.GITHUB_TOKEN }}
