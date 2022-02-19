@@ -30,11 +30,14 @@ jobs:
       run: mvn -B test --file pom.xml
     - name: Google Java Format
       uses: axel-op/googlejavaformat-action@3.5.0
-    - name: Semantic Release
-    - uses: actions/checkout@master
-    - uses: go-semantic-release/action@v1
-      with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+  semantic:
+      runs-on: windows-latest
+      steps:
+      - uses: actions/checkout@master
+      - uses: go-semantic-release/action@v1
+        with:
+         github-token: ${{ secrets.GITHUB_TOKEN }}
+     
   lint:
     runs-on: windows-latest
     steps:
