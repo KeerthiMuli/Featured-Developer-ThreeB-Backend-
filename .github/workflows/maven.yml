@@ -24,10 +24,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Install with Maven
-      run: mvn -B install --file pom.xml 
-    - name: Test with Maven
-      run: mvn -B test --file pom.xml
+  format:
+    runs-on: windows-latest
+    steps:
     - name: Google Java Format
       uses: axel-op/googlejavaformat-action@3.5.0   
   lint:
@@ -35,10 +34,20 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: JulienKode/pull-request-name-linter-action@v0.5.0
-  testcoverage:
+  installFreshDependencies:
      runs-on: windows-latest
      steps:
-     - uses: codecov/codecov-action@v1
-       with:
-          file: ./**/target/site/jacoco/jacoco.xml
-          name: codecov
+     - name: Install with Maven
+       run: mvn -B install --file pom.xml
+  runAndVerifyTests:
+     runs-on: windows-latest
+     steps:
+     - name: Test with Maven
+       run: mvn -B test --file pom.xml
+  testCoverageReport:
+        runs-on: windows-latest
+        steps:
+         - uses: codecov/codecov-action@v1
+           with:
+             file: ./**/target/site/jacoco/jacoco.xml
+             name: codecov
