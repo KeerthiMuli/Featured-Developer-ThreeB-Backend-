@@ -30,11 +30,12 @@ jobs:
       run: mvn -B test --file pom.xml
     - name: Google Java Format
       uses: axel-op/googlejavaformat-action@3.5.0
+    - name: Semantic release
+    - run: mvn semantic-release
   lint:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
     - uses: JulienKode/pull-request-name-linter-action@v0.5.0
     
-    - name: Semantic release
-    - run: mvn semantic-release
+ 
