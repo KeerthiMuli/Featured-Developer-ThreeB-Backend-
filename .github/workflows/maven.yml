@@ -32,11 +32,8 @@ jobs:
       uses: axel-op/googlejavaformat-action@3.5.0
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Semantic Release
-      uses: cycjimmy/semantic-release-action@v2
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - name: go-semantic-release
+      uses: go-semantic-release/action@v1.17.0
   lint:
     runs-on: windows-latest
     steps:
