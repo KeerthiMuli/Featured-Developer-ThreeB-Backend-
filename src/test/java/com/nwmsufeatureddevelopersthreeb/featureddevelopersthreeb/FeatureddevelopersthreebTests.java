@@ -8,8 +8,8 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-      DeveloperControllerTests.class,
-       //RandomTestClass.clas
+  DeveloperControllerTests.class,
+  // RandomTestClass.clas
 })
 // @RunWith(SpringRunner.class)
 // @SpringBootTest

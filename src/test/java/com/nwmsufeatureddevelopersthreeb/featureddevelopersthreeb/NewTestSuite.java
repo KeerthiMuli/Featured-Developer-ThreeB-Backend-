@@ -20,7 +20,6 @@ import org.junit.runners.Suite;
   com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb.DeveloperControllerTests.class,
   com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb.FeatureddevelopersthreebTests.class
 })
-
 public class NewTestSuite {
 
   @BeforeClass
