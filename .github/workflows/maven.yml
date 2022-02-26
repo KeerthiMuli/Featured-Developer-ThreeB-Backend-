@@ -52,12 +52,3 @@ jobs:
      - uses: release-drafter/release-drafter@v5
        with:
          github-token: ${{ secrets.GITHUB_TOKEN }}
-  publish_test_results:
-    runs-on: windows-latest
-    steps:
-     - uses: testspace-com/setup-testspace@v1
-       with:
-        domain: ${{github.repository_owner}}
-        token: ${{ secrets.TESTSPACE_TOKEN }} # optional, only required for private repos
-        run: testspace path/to/*.xml
-   
