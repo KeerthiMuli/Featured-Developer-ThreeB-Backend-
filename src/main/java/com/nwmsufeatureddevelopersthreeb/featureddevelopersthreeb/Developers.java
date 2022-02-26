@@ -41,7 +41,6 @@ public class Developers {
   @Column(name = "image")
   private String Image;
 
-
   public String getDeveloperId() {
     return developerId;
   }
@@ -58,21 +57,26 @@ public class Developers {
     this.fullName = fullName;
   }
 
-    public Developers() {
-    }
-  
-  
+  public Developers() {}
 
-    public Developers(String developerId, String fullName, String Emailaddress, String Goals, String Skills, String Linkedinurl, String Githuburl, String Image) {
-        this.developerId = developerId;
-        this.fullName = fullName;
-        this.Emailaddress = Emailaddress;
-        this.Goals = Goals;
-        this.Skills = Skills;
-        this.Linkedinurl = Linkedinurl;
-        this.Githuburl = Githuburl;
-        this.Image = Image;
-    }
+  public Developers(
+      String developerId,
+      String fullName,
+      String Emailaddress,
+      String Goals,
+      String Skills,
+      String Linkedinurl,
+      String Githuburl,
+      String Image) {
+    this.developerId = developerId;
+    this.fullName = fullName;
+    this.Emailaddress = Emailaddress;
+    this.Goals = Goals;
+    this.Skills = Skills;
+    this.Linkedinurl = Linkedinurl;
+    this.Githuburl = Githuburl;
+    this.Image = Image;
+  }
 
   public String getEmailaddress() {
     return Emailaddress;

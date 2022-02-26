@@ -13,27 +13,24 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 /**
- *
  * @author S541906
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb.DevelopersControllerTest.class, com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb.FeatureddevelopersthreebTests.class})
+@Suite.SuiteClasses({
+  com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb.DevelopersControllerTest.class,
+  com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb.FeatureddevelopersthreebTests.class
+})
 public class NewTestSuite {
 
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
+  @BeforeClass
+  public static void setUpClass() throws Exception {}
 
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
+  @AfterClass
+  public static void tearDownClass() throws Exception {}
 
-    @Before
-    public void setUp() throws Exception {
-    }
+  @Before
+  public void setUp() throws Exception {}
 
-    @After
-    public void tearDown() throws Exception {
-    }
-    
+  @After
+  public void tearDown() throws Exception {}
 }
