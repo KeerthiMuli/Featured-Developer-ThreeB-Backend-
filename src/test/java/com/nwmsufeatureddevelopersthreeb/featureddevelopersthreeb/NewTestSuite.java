@@ -16,10 +16,14 @@ import org.junit.runners.Suite;
  * @author S541906
  */
 @RunWith(Suite.class)
+<<<<<<< Updated upstream
 @Suite.SuiteClasses({
   com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb.DevelopersControllerTests.class,
   com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb.FeatureddevelopersthreebTests.class
 })
+=======
+@Suite.SuiteClasses({com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb.DeveloperControllerTests.class, com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb.FeatureddevelopersthreebTests.class})
+>>>>>>> Stashed changes
 public class NewTestSuite {
 
   @BeforeClass
