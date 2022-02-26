@@ -28,10 +28,6 @@ jobs:
       run: mvn -B install --file pom.xml
     - name: Run Tests with Maven
       run: mvn -B test --file pom.xml
-    - uses: ashley-taylor/junit-report-annotations-action@master
-      with:
-        access-token: ${{ secrets.GITHUB_TOKEN }}
-      if: always()
     - name: Google Java Format
       uses: axel-op/googlejavaformat-action@3.5.0 
   lint:
