@@ -1,6 +1,7 @@
 # Featured-Developer-ThreeB-Backend
 
 [![Known Vulnerabilities](https://snyk.io/test/github/KeerthiMuli/Featured-Developer-ThreeB-Backend/badge.svg)](https://snyk.io/test/github/KeerthiMuli/Featured-Developer-ThreeB-Backend)
+
 ![](https://github.com/kolorobot/spring-boot-junit5/workflows/tests/badge.svg)
 
 ## App Focus
@@ -14,6 +15,14 @@ When users log in, this app will show information about the developers in the GD
 <li> We propose to create the application using Vue on the front end. As Vue enables developers to use ordinary HTML for front-end development rather than writing sophisticated JS code. In addition, the framework may generate reusable parts from view data. The ability to create custom elements improves code reuse and accelerates development.</li>
  <li> We are planning for Bootstrap and Flex for Front-end responsive design.</li>
 <ol>
+ 
+## Steps to run tests
+ ### In NetBeans
+- Right click on "Featured-Developer-ThreeB-Backend\src\test\java\com\nwmsufeatureddevelopersthreeb\featureddevelopersthreeb" and select test file.
+ ### Using GitHub Actions
+ - GitHUb actions run automatically once new test cases are commited.
+## Heroku Deployment Pipeline
+   ## ![Link to Heroku Deployment Pipeline](https://user-images.githubusercontent.com/77706824/155826326-0ee71867-9230-4f4d-a6bf-7b33a5b53f3a.png)
 
    ## [Link to Proposal ](https://github.com/KeerthiMuli/Featured-Developer-Proposal/blob/main/Proposal.md)
   
