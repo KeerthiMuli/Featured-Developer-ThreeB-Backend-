@@ -1,6 +1,7 @@
 # Featured-Developer-ThreeB-Backend
 
 [![Known Vulnerabilities](https://snyk.io/test/github/KeerthiMuli/Featured-Developer-ThreeB-Backend/badge.svg)](https://snyk.io/test/github/KeerthiMuli/Featured-Developer-ThreeB-Backend)
+![](https://github.com/kolorobot/spring-boot-junit5/workflows/tests/badge.svg)
 
 ## App Focus
 When users log in, this app will show information about the developers in the GDP1 class.
