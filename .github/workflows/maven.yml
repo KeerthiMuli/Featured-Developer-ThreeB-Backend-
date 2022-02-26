@@ -55,9 +55,9 @@ jobs:
   publish_test_results:
     runs-on: windows-latest
     steps:
-       - uses: EnricoMi/publish-unit-test-result-action@v1
-         if: always()
-         with:
-          files: test-results/**/*.xml
-   
+     - uses: testspace-com/setup-testspace@v1
+       with:
+        domain: ${{github.repository_owner}}
+        token: ${{ secrets.TESTSPACE_TOKEN }} # optional, only required for private repos
+        run: testspace path/to/*.xml
    
