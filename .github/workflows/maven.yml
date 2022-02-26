@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build_format_install_verifytests:
+  build_format_install_runtests:
 
     runs-on: windows-latest
 
@@ -26,7 +26,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Install with Maven
       run: mvn -B install --file pom.xml
-    - name: Test with Maven
+    - name: Run Tests with Maven
       run: mvn -B test --file pom.xml
     - uses: ashley-taylor/junit-report-annotations-action@master
       with:
@@ -34,8 +34,6 @@ jobs:
       if: always()
     - name: Google Java Format
       uses: axel-op/googlejavaformat-action@3.5.0 
-    - name: Run tests 
-      run: mvn test
   lint:
     runs-on: windows-latest
     steps:
@@ -54,3 +52,12 @@ jobs:
      - uses: release-drafter/release-drafter@v5
        with:
          github-token: ${{ secrets.GITHUB_TOKEN }}
+  publish_test_results:
+    runs-on: windows-latest
+    steps:
+       - uses: EnricoMi/publish-unit-test-result-action@v1
+         if: always()
+         with:
+          files: test-results/**/*.xml
+   
+   
