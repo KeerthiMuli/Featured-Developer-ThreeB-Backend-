@@ -1,5 +1,6 @@
 # Featured-Developer-ThreeB-Backend
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/30432fbd77aa49bfb31cddcc40553d99)](https://www.codacy.com/gh/KeerthiMuli/Featured-Developer-ThreeB-Backend/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=KeerthiMuli/Featured-Developer-ThreeB-Backend&amp;utm_campaign=Badge_Grade)
 [![Known Vulnerabilities](https://snyk.io/test/github/KeerthiMuli/Featured-Developer-ThreeB-Backend/badge.svg)](https://snyk.io/test/github/KeerthiMuli/Featured-Developer-ThreeB-Backend)
 
 ![](https://github.com/kolorobot/spring-boot-junit5/workflows/tests/badge.svg)
