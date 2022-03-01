@@ -47,4 +47,14 @@ public class DevelopersController {
   public List<Developers> getall() {
     return service.listAll();
   }
+ 
+  // To create new developers
+
+	@PostMapping("/developers/create")
+
+	public void create(@RequestBody Developers developer) {
+		service.save(developer);
+	}
+
 }
+
