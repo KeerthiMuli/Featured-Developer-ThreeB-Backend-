@@ -47,7 +47,10 @@ public class DevelopersController {
   public List<Developers> getall() {
     return service.listAll();
   }
- 
+  
+  @Operation(
+      summary = "To add developer details",
+      description = "This will add list of all developers details")
   // To create new developers
 
 	@PostMapping("/developers/create")
