@@ -23,7 +23,7 @@ public class DevelopersController {
       summary = "To get one Developer randomly",
       description = "This display developers details on a random basis")
   // To get one Developer details Randomly
-  @Scheduled(cron = "0 25 12 ? * *", zone = "CST")
+  @Scheduled(cron = "0 0 10 ? * *", zone = "CST")
   @GetMapping("/developers/random")
   public Developers random() {
     return service.display();
