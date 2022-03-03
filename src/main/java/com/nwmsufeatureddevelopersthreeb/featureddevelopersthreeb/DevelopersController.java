@@ -59,7 +59,9 @@ public class DevelopersController {
   }
   
   
-
+@Operation(
+      summary = "To delete developer details",
+      description = "This will delete list of all developers details")
   // To Delete Developers
 	@DeleteMapping("/developers/delete/{developerId}")
 	public void delete(@PathVariable String developerId) {
