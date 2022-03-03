@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @author s541906
  */
-@CrossOrigin//(origins = "http://localhost:8081")
+@CrossOrigin // (origins = "http://localhost:8081")
 @RestController
 public class DevelopersController {
   @Autowired private DevelopersService service;
@@ -57,16 +57,13 @@ public class DevelopersController {
   public void create(@RequestBody Developers developer) {
     service.save(developer);
   }
-  
-  
-@Operation(
+
+  @Operation(
       summary = "To delete developer details",
       description = "This will delete list of all developers details")
   // To Delete Developers
-	@DeleteMapping("/developers/delete/{developerId}")
-	public void delete(@PathVariable String developerId) {
-		service.delete(developerId);
-	}
-
-
+  @DeleteMapping("/developers/delete/{developerId}")
+  public void delete(@PathVariable String developerId) {
+    service.delete(developerId);
+  }
 }

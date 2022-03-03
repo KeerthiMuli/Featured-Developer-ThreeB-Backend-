@@ -36,35 +36,32 @@ public class DevelopersService {
     return developersRepository.save(developer);
   }
 
- 
-    public Developers display() {
-		Developers o = new Developers();
-		o = findRandom();
-		dee = o;
+  public Developers display() {
+    Developers o = new Developers();
+    o = findRandom();
+    dee = o;
 
-		if (dev.size() > 6) {
-			dev.clear();
-			return display();
-		}
-		else if (!dev.contains(o)) {
-			dev.add(o);
-			Iterator<Developers> i = dev.iterator();
-			while (i.hasNext()) {
-				System.out.println(i.next().toString());
-			}
-			return o;
+    if (dev.size() > 6) {
+      dev.clear();
+      return display();
+    } else if (!dev.contains(o)) {
+      dev.add(o);
+      Iterator<Developers> i = dev.iterator();
+      while (i.hasNext()) {
+        System.out.println(i.next().toString());
+      }
+      return o;
 
-		} else {
-			return display();
-		}
-
-	}
+    } else {
+      return display();
+    }
+  }
 
   public Developers getDee() {
     return dee;
   }
-  public void delete(String developerId) {
-			developersRepository.deleteById(developerId);
-		}
 
+  public void delete(String developerId) {
+    developersRepository.deleteById(developerId);
+  }
 }
