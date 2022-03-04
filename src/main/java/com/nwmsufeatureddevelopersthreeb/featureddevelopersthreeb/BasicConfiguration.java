@@ -3,13 +3,11 @@ package com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb;
 // import org.springframework.beans.factory.annotation.Value;
 // import org.springframework.context.annotation.Bean;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
 // import org.springframework.security.oauth2.client.registration.ClientRegistration;
 // import
 // org.springframework.security.oauth2.client.registration.InMemoryReactiveClientRegistrationRepository;
@@ -17,7 +15,6 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 // org.springframework.security.oauth2.client.registration.ReactiveClientRegistrationRepository;
 // import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebSecurity
@@ -31,8 +28,8 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
 
   @Override
   public void configure(HttpSecurity http) throws Exception {
-   http.csrf()
-     //  http.cors()
+    http.csrf()
+        //  http.cors()
         .disable()
         .authorizeRequests()
         .antMatchers("/")
@@ -43,8 +40,8 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
         .permitAll()
         .antMatchers(HttpMethod.GET, "/developers/getall")
         .permitAll()
-        .antMatchers(HttpMethod.GET, "/developers/getbyId/{developerId}").permitAll()
-
+        .antMatchers(HttpMethod.GET, "/developers/getbyId/{developerId}")
+        .permitAll()
         .antMatchers(HttpMethod.POST, "/developers/create")
         .permitAll()
         .antMatchers(HttpMethod.PUT, "/developers/update/{developerId}")
@@ -92,7 +89,7 @@ public WebMvcConfigurer corsConfigurer() {
         return source;
     }
 }*/
- 
+
   /* @Bean
   ReactiveClientRegistrationRepository getRegistration(
           @Value("${spring.security.oauth2.client.provider.my-platform.token-uri}") String tokenUri,
