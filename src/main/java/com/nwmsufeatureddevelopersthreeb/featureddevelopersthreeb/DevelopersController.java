@@ -61,7 +61,9 @@ public class DevelopersController {
   public void create(@RequestBody Developers developer) {
     service.save(developer);
   }
-  
+   @Operation(
+      summary = "To get list of all of Developers details by Id",
+      description = "This display developers details by Id")
 // To get developer details by Id
 
 	// @GetMapping("/developers/getbyId/{developerId}")
