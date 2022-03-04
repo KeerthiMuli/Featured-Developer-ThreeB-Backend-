@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @author s541906
  */
-@CrossOrigin // (origins = "http://localhost:8081")
+@CrossOrigin //(origins = "https://featureddevelopers3bfrontend.herokuapp.com/#/")
 @RestController
 public class DevelopersController {
   @Autowired private DevelopersService service;
@@ -37,7 +37,8 @@ public class DevelopersController {
       description =
           "This display developers details randomly once per day returned from /developers/random")
   // To get one developer details randomly once per day
-  @RequestMapping(value = "/developers/randomshow", method = RequestMethod.GET)
+   @GetMapping("/developers/randomshow")
+ // @RequestMapping(value = "/developers/randomshow", method = RequestMethod.GET)
   public Developers show() {
     return service.getDee();
   }
@@ -60,6 +61,20 @@ public class DevelopersController {
   public void create(@RequestBody Developers developer) {
     service.save(developer);
   }
+  
+// To get developer details by Id
+
+	// @GetMapping("/developers/getbyId/{developerId}")
+	@RequestMapping(value = "/developers/getbyId/{developerId}", method = RequestMethod.GET)
+	public ResponseEntity<Developers> getbyId(@PathVariable String developerId) {
+		try {
+			Developers developers = service.get(developerId);
+			return new ResponseEntity<Developers>(developers, HttpStatus.OK);
+		} catch (NoSuchElementException e) {
+			return new ResponseEntity<Developers>(HttpStatus.NOT_FOUND);
+		}
+	}
+
 
   @Operation(
       summary = "To delete developer details",
