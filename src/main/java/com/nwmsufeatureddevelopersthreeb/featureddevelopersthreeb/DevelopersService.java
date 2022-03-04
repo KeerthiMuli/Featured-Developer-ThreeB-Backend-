@@ -60,10 +60,10 @@ public class DevelopersService {
   public Developers getDee() {
     return dee;
   }
-public Developers get(String developerId) {
-			return developersRepository.findById(developerId).get();
-		}
 
+  public Developers get(String developerId) {
+    return developersRepository.findById(developerId).get();
+  }
 
   public void delete(String developerId) {
     developersRepository.deleteById(developerId);

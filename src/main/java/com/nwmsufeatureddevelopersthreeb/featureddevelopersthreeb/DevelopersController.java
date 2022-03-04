@@ -69,45 +69,40 @@ public class DevelopersController {
   public void delete(@PathVariable String developerId) {
     service.delete(developerId);
   }
-  
-  
-   @Operation(
+
+  @Operation(
       summary = "To update developer details",
       description = "This will update list of all developers details")
   // To update developers details
 
-	@PutMapping("/developers/update/{developerId}")
-	public ResponseEntity<Developers> update(@RequestBody Developers developers, @PathVariable String developerId) {
-		try {
-			Developers existDevelopers = service.get(developerId);
-		    if(developers.getDeveloperId() != null)
-			existDevelopers.setDeveloperId(developers.getDeveloperId());
-		    service.save(existDevelopers);
-		    if(developers.getEmailaddress() != null)
-			existDevelopers.setEmailaddress(developers.getEmailaddress());
-		    service.save(existDevelopers);
-		    if(developers.getFullName() != null)
-			existDevelopers.setFullName(developers.getFullName());
-		    service.save(existDevelopers);
-		    if(developers.getGithuburl() != null)
-			existDevelopers.setGithuburl(developers.getGithuburl());
-		    service.save(existDevelopers);
-		    if(developers.getGoals() != null)
-			existDevelopers.setGoals(developers.getGoals());
-		    service.save(existDevelopers);
-		    if(developers.getImage() != null)
-			existDevelopers.setImage(developers.getImage());
-		    service.save(existDevelopers);
-		    if(developers.getLinkedinurl() != null)
-			existDevelopers.setLinkedinurl(developers.getLinkedinurl());
-		    service.save(existDevelopers);
-		    if(developers.getSkills() != null)
-			existDevelopers.setSkills(developers.getSkills());
-		    service.save(existDevelopers);		
-			return new ResponseEntity<>(HttpStatus.OK);
-		} catch (NoSuchElementException e) {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		}
-	}
-
+  @PutMapping("/developers/update/{developerId}")
+  public ResponseEntity<Developers> update(
+      @RequestBody Developers developers, @PathVariable String developerId) {
+    try {
+      Developers existDevelopers = service.get(developerId);
+      if (developers.getDeveloperId() != null)
+        existDevelopers.setDeveloperId(developers.getDeveloperId());
+      service.save(existDevelopers);
+      if (developers.getEmailaddress() != null)
+        existDevelopers.setEmailaddress(developers.getEmailaddress());
+      service.save(existDevelopers);
+      if (developers.getFullName() != null) existDevelopers.setFullName(developers.getFullName());
+      service.save(existDevelopers);
+      if (developers.getGithuburl() != null)
+        existDevelopers.setGithuburl(developers.getGithuburl());
+      service.save(existDevelopers);
+      if (developers.getGoals() != null) existDevelopers.setGoals(developers.getGoals());
+      service.save(existDevelopers);
+      if (developers.getImage() != null) existDevelopers.setImage(developers.getImage());
+      service.save(existDevelopers);
+      if (developers.getLinkedinurl() != null)
+        existDevelopers.setLinkedinurl(developers.getLinkedinurl());
+      service.save(existDevelopers);
+      if (developers.getSkills() != null) existDevelopers.setSkills(developers.getSkills());
+      service.save(existDevelopers);
+      return new ResponseEntity<>(HttpStatus.OK);
+    } catch (NoSuchElementException e) {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+  }
 }
