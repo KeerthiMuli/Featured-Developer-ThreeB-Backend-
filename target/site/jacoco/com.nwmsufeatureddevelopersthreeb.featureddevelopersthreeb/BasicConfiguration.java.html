@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BasicConfiguration.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">featureddevelopersthreeb</a> &gt; <a href="index.source.html" class="el_package">com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb</a> &gt; <span class="el_source">BasicConfiguration.java</span></div><h1>BasicConfiguration.java</h1><pre class="source lang-java linenums">package com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb;
+
+// import org.springframework.beans.factory.annotation.Value;
+// import org.springframework.context.annotation.Bean;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+// import org.springframework.security.oauth2.client.registration.ClientRegistration;
+// import
+// org.springframework.security.oauth2.client.registration.InMemoryReactiveClientRegistrationRepository;
+// import
+// org.springframework.security.oauth2.client.registration.ReactiveClientRegistrationRepository;
+// import org.springframework.security.oauth2.core.AuthorizationGrantType;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+@Configuration
+@EnableWebSecurity
+@EnableWebMvc
+public class BasicConfiguration extends WebSecurityConfigurerAdapter {
+  private final LogOut logoutHandler;
+
+<span class="fc" id="L25">  public BasicConfiguration(LogOut logoutHandler) {</span>
+<span class="fc" id="L26">    this.logoutHandler = logoutHandler;</span>
+<span class="fc" id="L27">  }</span>
+
+  @Override
+  public void configure(HttpSecurity http) throws Exception {
+<span class="fc" id="L31">    http.cors();</span>
+<span class="fc" id="L32">    http.csrf()</span>
+<span class="fc" id="L33">        .disable()</span>
+<span class="fc" id="L34">        .authorizeRequests()</span>
+<span class="fc" id="L35">        .antMatchers(&quot;/&quot;)</span>
+<span class="fc" id="L36">        .permitAll()</span>
+<span class="fc" id="L37">        .antMatchers(HttpMethod.GET, &quot;/developers/random&quot;)</span>
+<span class="fc" id="L38">        .permitAll()</span>
+<span class="fc" id="L39">        .antMatchers(HttpMethod.GET, &quot;/developers/randomshow&quot;)</span>
+<span class="fc" id="L40">        .permitAll()</span>
+<span class="fc" id="L41">        .antMatchers(HttpMethod.GET, &quot;/developers/getall&quot;)</span>
+<span class="fc" id="L42">        .permitAll()</span>
+<span class="fc" id="L43">        .antMatchers(HttpMethod.GET, &quot;/developers/getbyId/{developerId}&quot;)</span>
+<span class="fc" id="L44">        .permitAll()</span>
+<span class="fc" id="L45">        .antMatchers(HttpMethod.POST, &quot;/developers/create&quot;)</span>
+<span class="fc" id="L46">        .permitAll()</span>
+<span class="fc" id="L47">        .antMatchers(HttpMethod.PUT, &quot;/developers/update/{developerId}&quot;)</span>
+<span class="fc" id="L48">        .permitAll()</span>
+<span class="fc" id="L49">        .antMatchers(HttpMethod.DELETE, &quot;/developers/delete/{developerId}&quot;)</span>
+<span class="fc" id="L50">        .permitAll()</span>
+        //    .antMatchers(&quot;/**&quot;).permitAll()
+<span class="fc" id="L52">        .mvcMatchers(&quot;swagger-ui.html&quot;)</span>
+<span class="fc" id="L53">        .permitAll()</span>
+<span class="fc" id="L54">        .mvcMatchers(&quot;/&quot;)</span>
+<span class="fc" id="L55">        .permitAll()</span>
+<span class="fc" id="L56">        .mvcMatchers(&quot;/logout&quot;)</span>
+<span class="fc" id="L57">        .permitAll()</span>
+<span class="fc" id="L58">        .anyRequest()</span>
+<span class="fc" id="L59">        .authenticated()</span>
+<span class="fc" id="L60">        .and()</span>
+<span class="fc" id="L61">        .oauth2Login()</span>
+<span class="fc" id="L62">        .and()</span>
+<span class="fc" id="L63">        .logout();</span>
+<span class="fc" id="L64">  }</span>
+}
+/*@Bean
+public WebMvcConfigurer corsConfigurer() {
+
+    return new WebMvcConfigurer() {
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+            registry.addMapping(&quot;/**&quot;)
+                    .allowedOrigins(
+                            &quot;http://localhost:8080&quot;,
+                            &quot;http://localhost:8082&quot; );
+        }
+    };
+}
+}*/
+
+/*@Bean
+    CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList(&quot;*&quot;));
+        configuration.setAllowedMethods(Arrays.asList(&quot;GET&quot;,&quot;POST&quot;));
+        configuration.setAllowedHeaders(Collections.singletonList(&quot;*&quot;));
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration(&quot;/**&quot;, configuration);
+        return source;
+    }
+}*/
+
+  /* @Bean
+  ReactiveClientRegistrationRepository getRegistration(
+          @Value(&quot;${spring.security.oauth2.client.provider.my-platform.token-uri}&quot;) String tokenUri,
+          @Value(&quot;${spring.security.oauth2.client.registration.my-platform.client-id}&quot;) String clientId,
+          @Value(&quot;${spring.security.oauth2.client.registration.my-platform.client-secret}&quot;) String clientSecret,
+          @Value(&quot;${spring.security.oauth2.client.registration.my-platform.scopes}&quot;) String scope
+  ) {
+      ClientRegistration registration = ClientRegistration
+              .withRegistrationId(&quot;my-platform&quot;)
+              .tokenUri(tokenUri)
+              .clientId(clientId)
+              .clientSecret(clientSecret)
+              .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
+              .scope(scope)
+              .build();
+      return new InMemoryReactiveClientRegistrationRepository(registration);
+  }*/
+/*  @Bean
+  public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			 public void addCorsMappings(CorsRegistry registry) {
+registry.addMapping(&quot;/**&quot;)
+.allowedOrigins(&quot;*&quot;)
+.allowedMethods(&quot;GET&quot;, &quot;PUT&quot;, &quot;POST&quot;, &quot;PATCH&quot;, &quot;DELETE&quot;, &quot;OPTIONS&quot;);
+}
+		};
+	}
+
+}*/
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

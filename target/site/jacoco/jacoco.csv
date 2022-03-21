@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+featureddevelopersthreeb,com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb,DevelopersService,79,8,6,0,20,2,10,1,7,1
+featureddevelopersthreeb,com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb,OpenApiConfig,0,19,0,0,0,6,0,2,0,2
+featureddevelopersthreeb,com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb,DevelopersController,152,3,16,0,35,1,15,1,7,1
+featureddevelopersthreeb,com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb,LogOut,55,6,0,0,15,3,2,1,2,1
+featureddevelopersthreeb,com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb,Developers,106,27,0,0,26,10,18,1,18,1
+featureddevelopersthreeb,com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb,BasicConfiguration,0,128,0,0,0,36,0,2,0,2
+featureddevelopersthreeb,com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb,AuthenticationController,2,3,0,0,1,1,1,1,1,1
+featureddevelopersthreeb,com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb,FileUploadUtil,51,0,2,0,11,0,3,0,2,0
+featureddevelopersthreeb,com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb,Featureddevelopersthreeb,5,3,0,0,2,1,1,1,1,1

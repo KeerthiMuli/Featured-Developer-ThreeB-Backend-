@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Developers.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">featureddevelopersthreeb</a> &gt; <a href="index.source.html" class="el_package">com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb</a> &gt; <span class="el_source">Developers.java</span></div><h1>Developers.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.nwmsufeatureddevelopersthreeb.featureddevelopersthreeb;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * @author s541906
+ */
+@Entity
+@Table(name = &quot;developers&quot;, schema = &quot;public&quot;)
+public class Developers {
+  @Id
+  @Column(name = &quot;developerid&quot;)
+  private String developerId;
+
+  @Column(name = &quot;fullname&quot;)
+  private String fullName;
+
+  @Column(name = &quot;emailaddress&quot;)
+  private String Emailaddress;
+
+  @Column(name = &quot;goals&quot;)
+  private String Goals;
+
+  @Column(name = &quot;skills&quot;)
+  private String Skills;
+
+  @Column(name = &quot;linkedinurl&quot;)
+  private String Linkedinurl;
+
+  @Column(name = &quot;githuburl&quot;)
+  private String Githuburl;
+
+  @Column(name = &quot;image&quot;)
+  private String Image;
+
+  public String getDeveloperId() {
+<span class="nc" id="L45">    return developerId;</span>
+  }
+
+  public void setDeveloperId(String developerId) {
+<span class="nc" id="L49">    this.developerId = developerId;</span>
+<span class="nc" id="L50">  }</span>
+
+  public String getFullName() {
+<span class="nc" id="L53">    return fullName;</span>
+  }
+
+  public void setFullName(String fullName) {
+<span class="nc" id="L57">    this.fullName = fullName;</span>
+<span class="nc" id="L58">  }</span>
+
+<span class="nc" id="L60">  public Developers() {}</span>
+
+  public Developers(
+      String developerId,
+      String fullName,
+      String Emailaddress,
+      String Goals,
+      String Skills,
+      String Linkedinurl,
+      String Githuburl,
+<span class="fc" id="L70">      String Image) {</span>
+<span class="fc" id="L71">    this.developerId = developerId;</span>
+<span class="fc" id="L72">    this.fullName = fullName;</span>
+<span class="fc" id="L73">    this.Emailaddress = Emailaddress;</span>
+<span class="fc" id="L74">    this.Goals = Goals;</span>
+<span class="fc" id="L75">    this.Skills = Skills;</span>
+<span class="fc" id="L76">    this.Linkedinurl = Linkedinurl;</span>
+<span class="fc" id="L77">    this.Githuburl = Githuburl;</span>
+<span class="fc" id="L78">    this.Image = Image;</span>
+<span class="fc" id="L79">  }</span>
+
+  public String getEmailaddress() {
+<span class="nc" id="L82">    return Emailaddress;</span>
+  }
+
+  public void setEmailaddress(String Emailaddress) {
+<span class="nc" id="L86">    this.Emailaddress = Emailaddress;</span>
+<span class="nc" id="L87">  }</span>
+
+  public String getGoals() {
+<span class="nc" id="L90">    return Goals;</span>
+  }
+
+  public void setGoals(String Goals) {
+<span class="nc" id="L94">    this.Goals = Goals;</span>
+<span class="nc" id="L95">  }</span>
+
+  public String getSkills() {
+<span class="nc" id="L98">    return Skills;</span>
+  }
+
+  public void setSkills(String Skills) {
+<span class="nc" id="L102">    this.Skills = Skills;</span>
+<span class="nc" id="L103">  }</span>
+
+  public String getLinkedinurl() {
+<span class="nc" id="L106">    return Linkedinurl;</span>
+  }
+
+  public void setLinkedinurl(String Linkedinurl) {
+<span class="nc" id="L110">    this.Linkedinurl = Linkedinurl;</span>
+<span class="nc" id="L111">  }</span>
+
+  public String getGithuburl() {
+<span class="nc" id="L114">    return Githuburl;</span>
+  }
+
+  public void setGithuburl(String Githuburl) {
+<span class="nc" id="L118">    this.Githuburl = Githuburl;</span>
+<span class="nc" id="L119">  }</span>
+
+  public String getImage() {
+<span class="nc" id="L122">    return Image;</span>
+  }
+
+  public void setImage(String Image) {
+<span class="nc" id="L126">    this.Image = Image;</span>
+<span class="nc" id="L127">  }</span>
+
+  @Override
+  public String toString() {
+<span class="nc" id="L131">    return &quot;Developers{&quot;</span>
+        + &quot;DeveloperId=&quot;
+        + developerId
+        + &quot;, FullName=&quot;
+        + fullName
+        + &quot;, Emailaddress=&quot;
+        + Emailaddress
+        + &quot;, Goals=&quot;
+        + Goals
+        + &quot;, Skills=&quot;
+        + Skills
+        + &quot;, Linkedinurl=&quot;
+        + Linkedinurl
+        + &quot;, &quot;
+        + &quot;Githuburl=&quot;
+        + Githuburl
+        + &quot;,Image=&quot;
+        + Image
+        + '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
