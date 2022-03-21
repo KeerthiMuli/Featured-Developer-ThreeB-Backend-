@@ -162,7 +162,7 @@
     		<testFailureIgnore>true</testFailureIgnore>
 			</configuration>
 </plugin>
-          <plugin>
+           <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
                      <version>0.8.6</version>
@@ -170,19 +170,22 @@
                         <!-- Prepares the property pointing to the JaCoCo runtime agent
                         which is passed as VM argument when Maven the Surefire plugin is executed. -->
                         <execution>
-                            <goals>
-                                <goal>prepare-agent</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>generate-report</id>
-                            <goals>
-                                <goal>report</goal>
-                            </goals>
-                        </execution>
+			<id>jacoco-initialize</id>
+			<goals>
+				<goal>prepare-agent</goal>
+			</goals>
+		</execution>
+		<execution>
+			<id>jacoco-report</id>
+			<phase>test</phase>
+			<goals>
+				<goal>report</goal>
+			</goals>
+		</execution>
                     </executions>
            
                 </plugin>
+
         </plugins>
     </build>
 </project>
