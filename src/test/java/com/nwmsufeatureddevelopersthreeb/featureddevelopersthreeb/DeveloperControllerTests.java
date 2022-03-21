@@ -97,6 +97,7 @@ public class DeveloperControllerTests extends FeatureddevelopersthreebTests {
     // TODO review the generated test code and remove the default call to fail.
     //  fail("The test case is a prototype.");
   }
+
   /** Test of getbyId method, of class DevelopersController. */
   @Test
   public void testGetbyId() {
@@ -107,4 +108,18 @@ public class DeveloperControllerTests extends FeatureddevelopersthreebTests {
     ResponseEntity<Developers> result = expResult;
     assertEquals(expResult, result);
   }
+  /**
+     * Test of update method, of class DevelopersController.
+     */
+    @Test
+    public void testUpdate() {
+        System.out.println("update");
+        Developers developers = null;
+        String developerId = "";
+        DevelopersController instance = new DevelopersController();
+        ResponseEntity<Developers> expResult = null;
+        ResponseEntity<Developers> result = expResult;
+        assertEquals(expResult, result);
+    }
+
 }
