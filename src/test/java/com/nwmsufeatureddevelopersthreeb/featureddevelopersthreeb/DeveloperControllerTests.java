@@ -24,7 +24,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DeveloperControllerTests extends FeatureddevelopersthreebTests{
+public class DeveloperControllerTests extends FeatureddevelopersthreebTests {
 
   @Autowired private DevelopersRepository developersRepository;
 
@@ -97,17 +97,14 @@ public class DeveloperControllerTests extends FeatureddevelopersthreebTests{
     // TODO review the generated test code and remove the default call to fail.
     //  fail("The test case is a prototype.");
   }
-     /**
-     * Test of getbyId method, of class DevelopersController.
-     */
-    @Test
-    public void testGetbyId() {
-        System.out.println("getbyId");
-        String developerId = "";
-        DevelopersController instance = new DevelopersController();
-        ResponseEntity<Developers> expResult = null;
-        ResponseEntity<Developers> result = expResult;
-        assertEquals(expResult, result);
-    }
-
+  /** Test of getbyId method, of class DevelopersController. */
+  @Test
+  public void testGetbyId() {
+    System.out.println("getbyId");
+    String developerId = "";
+    DevelopersController instance = new DevelopersController();
+    ResponseEntity<Developers> expResult = null;
+    ResponseEntity<Developers> result = expResult;
+    assertEquals(expResult, result);
+  }
 }
