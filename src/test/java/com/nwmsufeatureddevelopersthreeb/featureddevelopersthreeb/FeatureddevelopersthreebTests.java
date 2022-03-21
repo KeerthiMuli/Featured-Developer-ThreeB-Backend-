@@ -11,7 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 @ContextConfiguration
 @Suite.SuiteClasses({
   DeveloperControllerTests.class,
- // NewTestSuite.class
+  // NewTestSuite.class
 })
 // @RunWith(SpringRunner.class)
 // @SpringBootTest
