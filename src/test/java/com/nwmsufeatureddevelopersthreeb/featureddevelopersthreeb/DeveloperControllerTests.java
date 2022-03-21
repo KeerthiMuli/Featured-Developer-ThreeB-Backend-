@@ -108,18 +108,15 @@ public class DeveloperControllerTests extends FeatureddevelopersthreebTests {
     ResponseEntity<Developers> result = expResult;
     assertEquals(expResult, result);
   }
-  /**
-     * Test of update method, of class DevelopersController.
-     */
-    @Test
-    public void testUpdate() {
-        System.out.println("update");
-        Developers developers = null;
-        String developerId = "";
-        DevelopersController instance = new DevelopersController();
-        ResponseEntity<Developers> expResult = null;
-        ResponseEntity<Developers> result = expResult;
-        assertEquals(expResult, result);
-    }
-
+  /** Test of update method, of class DevelopersController. */
+  @Test
+  public void testUpdate() {
+    System.out.println("update");
+    Developers developers = null;
+    String developerId = "";
+    DevelopersController instance = new DevelopersController();
+    ResponseEntity<Developers> expResult = null;
+    ResponseEntity<Developers> result = expResult;
+    assertEquals(expResult, result);
+  }
 }
