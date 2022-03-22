@@ -119,36 +119,34 @@ public class DeveloperControllerTests extends FeatureddevelopersthreebTests {
     ResponseEntity<Developers> result = expResult;
     assertEquals(expResult, result);
   }
-@Test
-    public void testCreate() {
-        System.out.println("create");
-        Developers developer = new Developers(
-                "12345",
-                "sampleName",
-                "sample@email.com",
-                "goals",
-                "skill",
-                "linkedin.com",
-                "github.com",
-                "image");
-        DevelopersController instance = new DevelopersController();
-        ResponseEntity<Developers> expResult = null;
-        ResponseEntity<Developers> result = expResult;
-        assertEquals(expResult, result);
-        
-    }
-    
-    /**
-     * Test of delete method, of class DevelopersController.
-     */
-    @Test
-    public void testDelete() {
-        System.out.println("delete");
-        String developerId = "";
-        DevelopersController instance = new DevelopersController();
-        ResponseEntity<Developers> expResult = null;
-        ResponseEntity<Developers> result = expResult;
-        assertEquals(expResult, result);
-    }
 
+  @Test
+  public void testCreate() {
+    System.out.println("create");
+    Developers developer =
+        new Developers(
+            "12345",
+            "sampleName",
+            "sample@email.com",
+            "goals",
+            "skill",
+            "linkedin.com",
+            "github.com",
+            "image");
+    DevelopersController instance = new DevelopersController();
+    ResponseEntity<Developers> expResult = null;
+    ResponseEntity<Developers> result = expResult;
+    assertEquals(expResult, result);
+  }
+
+  /** Test of delete method, of class DevelopersController. */
+  @Test
+  public void testDelete() {
+    System.out.println("delete");
+    String developerId = "";
+    DevelopersController instance = new DevelopersController();
+    ResponseEntity<Developers> expResult = null;
+    ResponseEntity<Developers> result = expResult;
+    assertEquals(expResult, result);
+  }
 }
