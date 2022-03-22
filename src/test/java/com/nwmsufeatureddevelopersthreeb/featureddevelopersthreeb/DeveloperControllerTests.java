@@ -137,4 +137,18 @@ public class DeveloperControllerTests extends FeatureddevelopersthreebTests {
         assertEquals(expResult, result);
         
     }
+    
+    /**
+     * Test of delete method, of class DevelopersController.
+     */
+    @Test
+    public void testDelete() {
+        System.out.println("delete");
+        String developerId = "";
+        DevelopersController instance = new DevelopersController();
+        ResponseEntity<Developers> expResult = null;
+        ResponseEntity<Developers> result = expResult;
+        assertEquals(expResult, result);
+    }
+
 }
