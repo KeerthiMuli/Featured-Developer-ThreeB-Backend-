@@ -34,21 +34,21 @@ public class UserController {
     return UserStatus.SUCCESS;
   }
 
-    //User Login
-	    @PostMapping("/users/login")
-	    public UserStatus loginUser(@Valid @RequestBody User user) {
-	        List<User> users = service.listAll();
-	        String encodedString = Base64.getEncoder().encodeToString(user.getPassword().getBytes());
-	  	      user.setPassword(encodedString);
-	        for (User other : users) {
-	       	 if (other.getUsername().equals(user.getUsername())&& (other.getPassword().equals(user.getPassword()))) {
-	                user.setLoggedIn(true);
-	                service.save(user);
-	                return UserStatus.SUCCESS;
-	            }
-	        }
+  // User Login
+  @PostMapping("/users/login")
+  public UserStatus loginUser(@Valid @RequestBody User user) {
+    List<User> users = service.listAll();
+    String encodedString = Base64.getEncoder().encodeToString(user.getPassword().getBytes());
+    user.setPassword(encodedString);
+    for (User other : users) {
+      if (other.getUsername().equals(user.getUsername())
+          && (other.getPassword().equals(user.getPassword()))) {
+        user.setLoggedIn(true);
+        service.save(user);
+        return UserStatus.SUCCESS;
+      }
+    }
 
-	        return UserStatus.FAILURE;
-	    }
+    return UserStatus.FAILURE;
+  }
 }
-
