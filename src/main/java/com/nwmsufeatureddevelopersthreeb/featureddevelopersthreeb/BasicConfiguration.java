@@ -48,6 +48,10 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
         .permitAll()
         .antMatchers(HttpMethod.DELETE, "/developers/delete/{developerId}")
         .permitAll()
+        .antMatchers(HttpMethod.POST, "/users/register").permitAll()
+        .antMatchers(HttpMethod.POST, "/users/login").permitAll()
+       .antMatchers(HttpMethod.POST, "/users/logout").permitAll()
+
         //    .antMatchers("/**").permitAll()
         .mvcMatchers("swagger-ui.html")
         .permitAll()
